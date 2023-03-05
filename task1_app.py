@@ -124,11 +124,11 @@ elif page == "Documentation":
     st.title("Annotations")
     st.header("Fine annotations")
     st.write("Below are examples of our high quality dense pixel annotations that we provide for a volume of 5000 images. Overlayed colors encode semantic classes (see class definitions). Note that single instances of traffic participants are annotated individually.")
-    st.image(["fan1.png", "fan2.png", "fan3.png"], width=470)
+    st.image(["fan1.png", "fan2.png", "fan3.png"], width=450)
 
     st.header("Coarse annotations")
     st.write("In addition to the fine annotations, we provide coarser polygonal annotations for a set of 20 000 images in collaboration with Pallas Ludens. Again, overlayed colors encode the semantic classes (see class definitions). Note that we do not aim to annotated single instances, however, we marked polygons covering individual objects as such.")
-    st.image(["can1.png", "can2.png", "can3.png"], width=470)
+    st.image(["can1.png", "can2.png", "can3.png"], width=450)
 
     st.header("Videos")
     st.write("The videos below provide further examples of the Cityscapes Dataset. The first video contains roughly 1000 images with high quality annotations overlayed. The second video visualizes the precomputed depth maps using the corresponding right stereo views. The last video is extracted from a long video recording and visualizes the GPS positions as part of the dataset’s metadata. Note that the images are blurred for privacy reasons.")
