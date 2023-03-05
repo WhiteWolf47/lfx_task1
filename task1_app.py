@@ -13,7 +13,7 @@ lm1 = ["Unet_Model1", "Unet_Model2", "ResNet-38", "ResNet-101"]
 lm2 = [0.9111, 0.7866, 0.7840, 0.7760]
 lm3 = [0.3124, 0.7456, " ", " "]
 lm4 = ["Continuous Learning", "Continuous Learning", "Batch Learning", "Batch Learning"]
-lm5 = ["[GitHub](https://github.com/WhiteWolf47/cscapes_semantic_segmentation/model1.py))", "[GitHub](https://github.com/WhiteWolf47/cscapes_semantic_segmentation/model2.py)", "https://github.com/itijyou/ademxapp", "https://github.com/TuSimple/TuSimple-DUC"]
+lm5 = ["https://github.com/WhiteWolf47/cscapes_semantic_segmentation/model1.py", "https://github.com/WhiteWolf47/cscapes_semantic_segmentation/model2.py", "https://github.com/itijyou/ademxapp", "https://github.com/TuSimple/TuSimple-DUC"]
 
 #Dataframe for the table
 df_bm = pd.DataFrame(list(zip(lm1, lm2, lm3, lm4, lm5)), columns =['Model', 'Accuracy', 'Loss', 'Learning Paradigm', 'Github Link'])
@@ -22,6 +22,7 @@ df_bm = pd.DataFrame(list(zip(lm1, lm2, lm3, lm4, lm5)), columns =['Model', 'Acc
 page = st.sidebar.selectbox('Page Navigation', ["Home Page", "Documentation", "Download", "Benchmarking"])
 
 st.sidebar.markdown("""---""")
+st.sidebar.write("Although it was reccommended to make the website like [coda](https://coda-dataset.github.io/index.html), I decided to make it with a diffferent look using streamlit, I did so because for the former the layout was already available and I found it to be very non-appealing. I hope you like it :smile:")
 st.sidebar.write("Made with :heart: by [WhiteWolf47](https://github.com/WhiteWolf47)")
 
 if page == "Home Page":
@@ -30,11 +31,13 @@ if page == "Home Page":
     st.title("Dataset Overview")
     st.write("Cityscapes is a large-scale database which focuses on semantic understanding of urban street scenes. It provides semantic, instance-wise, and dense pixel annotations for 30 classes grouped into 8 categories (flat surfaces, humans, vehicles, constructions, objects, nature, sky, and void). The dataset consists of around 5000 fine annotated images and 20000 coarse annotated ones. Data was captured in 50 cities during several months, daytimes, and good weather conditions. It was originally recorded as video so the frames were manually selected to have the following features: large number of dynamic objects, varying scene layout, and varying background.")
     
+    
     st.image(["img3.png", "img4.png", "img2.png"], width=450)
 
     st.title("Lifelong learning algorithm overview")
     st.write("Lifelong Machine Learning or Lifelong Learning (LL) is an advanced machine learning (ML) paradigm that learns continuously, accumulates the knowledge learned in the past, and uses/adapts it to help future learning and problem solving. In the process, the learner becomes more and more knowledgeable and better and better at learning. This continuous learning ability is one of the hallmarks of human intelligence.")
-    
+    st.image("llimg.png")
+
     st.header("Some of the LL algorithms are:")
     
     st.subheader("1. MTL net (Multi-task learning with neural network) Caruana")
@@ -64,6 +67,9 @@ elif page == "Documentation":
     df = pd.DataFrame(list(zip(l1, l2)), columns =['Group', 'Classes'])
     df.reset_index(drop=True, inplace=True)
     st.table(df)
+    st.subheader("Dataset Directory Structure")
+    st.write("The dataset is organized in the following way:")
+    st.image("dp.jpeg")
 
     st.title("Data statistics")
     st.header("Features")
@@ -156,7 +162,8 @@ else:
 
     st.subheader("The following table shows the benchmarking results for the different models:")
     st.table(df_bm)
-
+    st.write("Unet_Model1 and Unet_Model2 are trained and tested by me :smile:")
+    st.write("If one wants to know about more models benchmarking, then one can visit this [link](https://paperswithcode.com/sota/semantic-segmentation-on-cityscapes?tag_filter=3%2C114)")
 
 
 
