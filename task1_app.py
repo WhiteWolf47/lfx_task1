@@ -13,7 +13,7 @@ lm1 = ["Unet_Model1", "Unet_Model2", "ResNet-38", "ResNet-101"]
 lm2 = [0.9111, 0.7866, 0.7840, 0.7760]
 lm3 = [0.3124, 0.7456, " ", " "]
 lm4 = ["Continuous Learning", "Continuous Learning", "Batch Learning", "Batch Learning"]
-lm5 = ["[GitHub](https://github.com/WhiteWolf47/lfx_task1)", "[GitHub](https://github.com/WhiteWolf47/lfx_task1)", "https://github.com/itijyou/ademxapp", "https://github.com/TuSimple/TuSimple-DUC"]
+lm5 = ["[GitHub](https://github.com/WhiteWolf47/cscapes_semantic_segmentation/model_1(unet).py))", "[GitHub](https://github.com/WhiteWolf47/cscapes_semantic_segmentation/model_2(unet).py)", "https://github.com/itijyou/ademxapp", "https://github.com/TuSimple/TuSimple-DUC"]
 
 #Dataframe for the table
 df_bm = pd.DataFrame(list(zip(lm1, lm2, lm3, lm4, lm5)), columns =['Model', 'Accuracy', 'Loss', 'Learning Paradigm', 'Github Link'])
