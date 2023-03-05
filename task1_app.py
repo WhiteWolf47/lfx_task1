@@ -52,11 +52,11 @@ if page == "Home Page":
     st.title("Dataset Sample")
     st.write("The dataset consists of around 5000 fine annotated images and 20000 coarse annotated ones. Data was captured in 50 cities during several months, daytimes, and good weather conditions. It was originally recorded as video so the frames were manually selected to have the following features: large number of dynamic objects, varying scene layout, and varying background.")
     st.header("Training Sample:")
-    st.image(["1.jpg", "2.jpg", "3.jpg"], width=470)
+    st.image(["1.jpg", "2.jpg", "3.jpg"], width=450)
     st.header("Validation Sample:")
-    st.image(["val/4.jpg", "val/5.jpg", "val/6.jpg"], width=470)
+    st.image(["val/4.jpg", "val/5.jpg", "val/6.jpg"], width=450)
     st.header("Test Sample:")
-    st.image(["test/1test.png", "test/2test.png", "test/3test.png"], width=470)
+    st.image(["test/1test.png", "test/2test.png", "test/3test.png"], width=450)
 
 elif page == "Documentation":
     st.title("Dataset partition description")
