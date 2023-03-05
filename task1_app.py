@@ -22,8 +22,7 @@ df_bm = pd.DataFrame(list(zip(lm1, lm2, lm3, lm4, lm5)), columns =['Model', 'Acc
 page = st.sidebar.selectbox('Page Navigation', ["Home Page", "Documentation", "Download", "Benchmarking"])
 
 st.sidebar.markdown("""---""")
-st.sidebar.write("[Github](https://github.com/WhiteWolf47/cscapes_semantic_segmentation)")
-st.sidebar.title("Dataset Sample")
+st.sidebar.write("Made with :heart: by [WhiteWolf47](https://github.com/WhiteWolf47)")
 
 if page == "Home Page":
 
